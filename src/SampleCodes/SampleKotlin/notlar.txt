@@ -1,1 +1,119 @@
-Deneme
+----- Hello World :D -----
+
+package org.csystem.app
+
+fun main() {
+    println("Hello World!...")
+}
+
+----- Fonksiyon Çağırma -----
+
+fun main() {
+    println("Hello World")
+    foo()
+    println("Goodbye World")
+}
+
+fun foo() {
+    println("foo")
+    bar()
+}
+
+fun bar() {
+    println("bar")
+}
+
+----- Unit Sözcüğü -----
+
+# Unit C# ve Java'daki void anahtar sözcüğüne karşılık gelmektedir. Kotlin 1.1 versiyonundan sonra geri dönüş değeri olmayan fonksiyonlar için Unit yazılması zorunlu değildir.
+
+fun main () : Unit {
+    println("Hello World")
+    foo()
+    println("Goodbye World")
+}
+
+fun foo() : Unit {
+    println("foo")
+    bar()
+}
+
+fun bar() : Unit {
+    println("bar")
+}
+
+----- Kotlin Temel Türler -----
+
+# Primitive Type yoktur. Kotlinde sınıf olarak belirtilmektedir.
+
+Tür İsmi        Uzunluk (byte)      Sınır Değerler
+Short           2                   [-32768, +32767]
+Int             4                   [-2147483648, +2147483647]
+Long            8                   [-9223372036854775808, +9223372036854775807]
+Byte            1                   [-128, +127]
+
+Float           4                   [±3.6*10-38, ±3.6*10+38]
+Double          8                   [±1.6*10-308, ±1.6*10-307]
+
+Char            2                   [0, 65535]
+Boolean         1                   [true, false]
+
+# Anahtar Notlar: Kotlin'de temel türler (primitive/built-in/pre-defined types) sınıf ile temsil edilmiştir.
+
+# Anahtar Notlar: Kotlin'de "işaretsiz (unsigned)" tamsayı türleri de bulunur. Bunlar ileride ele alınacaktır.
+# Örnek:
+
+fun main () : Unit {
+    val a: Int = 10
+    val b: Int = 20
+    val c = a + b
+    //a + b = a.plus(b)
+}
+
+----- Değişken Tanımlama -----
+
+# Kotlin’de val (value)-var (variable) olarak iki farklı değişken tanımlama yöntemi vardır.
+
+# Val, değeri get edilebilir ancak set edilemez. Sadece bir kez set edilebilir.
+# Var, get-set işlemleri yapılabilir.
+# Örnek:
+
+    val a: Int = 1
+    var b: Int = 2
+    a = a + 1 //Çalışmaz
+    b = b + 2 //Çalışır
+
+# Kotlin'de herhangi bir sınıf türüne herhangi başka bir sınıf türü değeri atanamaz.
+
+# Double türüne Int değeri atanamaz.
+# Örnek:
+
+    var a: Double = 3.14
+    a = 10
+
+----- println Fonksiyonu -----
+
+# println fonksiyonu bir değişkenin içeriğini ekrana basar.
+# Örnek:
+
+    val a: Int
+    a = 34
+    println(a)
+
+----- String Template -----
+
+# Örnek:
+
+    val a = 10
+    val b = 3.4
+    println("a = $a, b= $b")
+
+----- String Format -----
+
+# Örnek:
+
+    val a = 10
+    val b = 3.4
+    println("a = %d, b= %f".format(a, b))
+
+----- 2. ders 33:50 de kaldık -----
